@@ -19,3 +19,6 @@
 [submodule "bundle/pdv"]
 	path = bundle/pdv
 	url = https://webplantmedia@github.com/tobyS/pdv.git
+[submodule "bundle/simple-javascript-indenter"]
+	path = bundle/simple-javascript-indenter
+	url = https://webplantmedia@github.com/jiangmiao/simple-javascript-indenter.git
