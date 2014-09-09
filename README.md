@@ -56,6 +56,8 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###[VIM Visual Star Search](https://github.com/nelstrom/vim-visual-star-search)###
 
+###[Color Schemes](https://github.com/flazz/vim-colorschemes.git)###
+
 ##TODO...##
 
 * Need better jquery support
