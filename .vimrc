@@ -330,12 +330,12 @@ endfunction
 
 function! GenerateTags()
 	let sitepath = FetchSitePath()
-	exe "! ~/Scripts/ctags.sh ".sitepath
+	exe "! ~/.vim/scripts/ctags.sh ".sitepath
 endfunction
 
 function! CleanForMamp()
 	let sitepath = FetchSitePath()
-	exe "! sudo ~/Scripts/mamp.sh ".sitepath
+	exe "! sudo ~/.vim/scripts/mamp.sh ".sitepath
 endfunction
 
 function! OpenTerminal()
