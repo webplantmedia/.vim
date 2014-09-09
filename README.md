@@ -53,9 +53,9 @@ or you can copy and customize ~/.vim/.vimrc and ~/.vim/.gvimrc. Just create your
 
 ##TODO...##
 
-** Need better jquery support
-** Need elegant solution to autocomplete. Support for CSS3, HTML5, WordPress functions?
-** Tabs that wrap around and indent
+* Need better jquery support
+* Need elegant solution to autocomplete. Support for CSS3, HTML5, WordPress functions?
+* Tabs that wrap around and indent
 
 ##Help##
 
