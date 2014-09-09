@@ -1,11 +1,8 @@
-.vim
-====
-
 #Vim Plugins and Configuration Files for WordPress Development#
 
 Easily duplicate vim environment on any computer using vim
 
-#Installation#
+##Installation##
 
 Create a symbolic link to ~/.vim/.vimrc and ~/.vim/.gvimrc
 
