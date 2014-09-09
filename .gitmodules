@@ -40,3 +40,6 @@
 [submodule "bundle/php.vim"]
 	path = bundle/php.vim
 	url = https://webplantmedia@github.com/StanAngeloff/php.vim.git
+[submodule "open-browser.vim"]
+	path = open-browser.vim
+	url = https://webplantmedia@github.com/tyru/open-browser.vim.git
