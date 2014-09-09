@@ -22,3 +22,11 @@ Create a symbolic link to ~/.vim/.vimrc and ~/.vim/.gvimrc
 $ ln -s ~/.vim/.vimrc ~/.vimrc
 $ ln -s ~/.vim/.gvimrc ~/.gvimrc
 ```
+
+or you can copy and customize ~/.vim/.vimrc and ~/.vim/.gvimrc. Just create your own ~/.vimrc and ~/.gvimrc files.
+
+##Plugins Used##
+
+###[Transmit FTP](https://github.com/webplantmedia/transmit-ftp)###
+
+###[Simple Javascript Indenter](https://github.com/jiangmiao/simple-javascript-indenter)###
