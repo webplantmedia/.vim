@@ -5,5 +5,5 @@ then
 else
 	args=("$@")
 	cd ${args[0]}
-	exuberant-ctags -R --languages=php
+	exuberant-ctags -R --fields=+aimS --languages=php
 fi
