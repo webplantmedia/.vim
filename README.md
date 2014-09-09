@@ -23,7 +23,12 @@ $ ln -s ~/.vim/.vimrc ~/.vimrc
 $ ln -s ~/.vim/.gvimrc ~/.gvimrc
 ```
 
-or you can copy and customize ~/.vim/.vimrc and ~/.vim/.gvimrc. Just create your own ~/.vimrc and ~/.gvimrc files.
+or you can copy and customize your own vimrc and gvimrc files. Just create a copy.
+
+```
+$ cp ~/.vim/.vimrc ~/.vimrc
+$ cp ~/.vim/.gvimrc ~/.gvimrc
+```
 
 ##Package Manager Used##
 
