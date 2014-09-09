@@ -68,6 +68,8 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###[PHP Complete](https://github.com/shawncplus/phpcomplete.vim)###
 
+###[WordPress.vim](https://github.com/dsawardekar/wordpress.vim)###
+
 ##TODO...##
 
 * Need better jquery support
