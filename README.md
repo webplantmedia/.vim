@@ -58,6 +58,16 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###[Color Schemes](https://github.com/flazz/vim-colorschemes.git)###
 
+###[Buffergator](https://github.com/jeetsukumaran/vim-buffergator)###
+
+###[PHP VIM](https://github.com/StanAngeloff/php.vim)###
+
+###[Open Browser](https://github.com/tyru/open-browser.vim)###
+
+###[VIM Markdown](https://github.com/tpope/vim-markdown)###
+
+###[PHP Complete](https://github.com/shawncplus/phpcomplete.vim)###
+
 ##TODO...##
 
 * Need better jquery support
