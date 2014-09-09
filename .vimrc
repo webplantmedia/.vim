@@ -183,7 +183,7 @@ map <silent> <leader><cr> :noh<cr>
 " map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-" map <leader>cd :cd %:p:h<cr>:pwd<cr>
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 map <leader>6 :b #<cr>
 
@@ -230,15 +230,6 @@ nnoremap <leader>m :call CleanForMamp()<CR>
 
 " convert convert to (h)html
 nnoremap <leader>h :call ConvertPHPToHTML()<CR>
-
-
-""""""""""""""""""""""""""""""
-" Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-" vnoremap <silent> * :call VisualSelection('f', '')<CR>
-" vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -357,27 +348,6 @@ function! CmdLine(str)
 	emenu Foo.Bar
 	unmenu Foo
 endfunction 
-
-" function! VisualSelection(direction, extra_filter) range
-	" let l:saved_reg = @"
-	" execute "normal! vgvy"
-
-	" let l:pattern = escape(@", '\\/.*$^~[]')
-	" let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-	" if a:direction == 'b'
-		" execute "normal ?" . l:pattern . "^M"
-	" elseif a:direction == 'gv'
-		" call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.' . a:extra_filter)
-	" elseif a:direction == 'replace'
-		" call CmdLine("%s" . '/'. l:pattern . '/')
-	" elseif a:direction == 'f'
-		" execute "normal /" . l:pattern . "^M"
-	" endif
-
-	" let @/ = l:pattern
-	" let @" = l:saved_reg
-" endfunction
 
 " Returns true if paste mode is enabled
 function! HasPaste()
