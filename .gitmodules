@@ -13,3 +13,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://webplantmedia@github.com/SirVer/ultisnips.git
+[submodule "bundle/vmustache"]
+	path = bundle/vmustache
+	url = https://webplantmedia@github.com/tobyS/vmustache.git
