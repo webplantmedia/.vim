@@ -1,6 +1,6 @@
 #Vim Plugins and Configuration Files for WordPress Development#
 
-Easily duplicate vim environment on any computer using vim
+Easily duplicate vim environment on any computer
 
 ##Installation##
 
