@@ -40,3 +40,6 @@
 [submodule "bundle/php.vim"]
 	path = bundle/php.vim
 	url = https://webplantmedia@github.com/StanAngeloff/php.vim.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://webplantmedia@github.com/tpope/vim-markdown.git
