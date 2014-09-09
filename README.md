@@ -25,8 +25,28 @@ $ ln -s ~/.vim/.gvimrc ~/.gvimrc
 
 or you can copy and customize ~/.vim/.vimrc and ~/.vim/.gvimrc. Just create your own ~/.vimrc and ~/.gvimrc files.
 
+##Package Manager Used##
+
+###[pathogen.vim](https://github.com/tpope/vim-pathogen)###
+
 ##Plugins Used##
 
 ###[Transmit FTP](https://github.com/webplantmedia/transmit-ftp)###
 
 ###[Simple Javascript Indenter](https://github.com/jiangmiao/simple-javascript-indenter)###
+
+###[PDV](https://github.com/tobyS/pdv)###
+
+###[vmustache](https://github.com/tobyS/vmustache)###
+
+###[UltiSnips](https://github.com/SirVer/ultisnips)###
+
+###[ctrlp.vim](https://github.com/kien/ctrlp.vim)###
+
+###[ack.vim](https://github.com/mileszs/ack.vim)###
+
+###[The NERD Tree](https://github.com/scrooloose/nerdtree)###
+
+###[NERD Commenter](https://github.com/scrooloose/nerdcommenter)###
+
+###[VIM Visual Star Search](https://github.com/nelstrom/vim-visual-star-search)###
