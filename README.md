@@ -50,3 +50,13 @@ or you can copy and customize ~/.vim/.vimrc and ~/.vim/.gvimrc. Just create your
 ###[NERD Commenter](https://github.com/scrooloose/nerdcommenter)###
 
 ###[VIM Visual Star Search](https://github.com/nelstrom/vim-visual-star-search)###
+
+##TODO...##
+
+** Need better jquery support
+** Need elegant solution to autocomplete. Support for CSS3, HTML5, WordPress functions?
+** Tabs that wrap around and indent
+
+##Help##
+
+If you think there is a better plugin, mapping, or configuration setting, please let me know. I'm looking to create a very good and efficient WordPress development environment.
