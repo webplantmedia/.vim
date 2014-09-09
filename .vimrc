@@ -14,6 +14,8 @@ set history=700
 filetype on
 filetype plugin indent on
 
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
+
 " Set to auto read when a file is changed from the outside
 set autoread
 
@@ -302,6 +304,15 @@ map <leader>q :e ~/buffer<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" Search in Codex for WordPress
+nnoremap <leader>co :Wcodexsearch<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Misc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set omnifunc=syntaxcomplete#Complete
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper functions
@@ -377,3 +388,16 @@ function! <SID>BufcloseCloseIt()
 	 execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PHP Sytax Highlight for Comments
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
