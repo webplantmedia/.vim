@@ -91,7 +91,7 @@ syntax on
 
 set guifont=Courier\ New:h16
 set background=dark
-colorscheme kolor
+colorscheme desert256
 
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -321,8 +321,8 @@ nnoremap <leader>co :Wcodexsearch<CR>
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -352,24 +352,23 @@ endfunction
 
 function! GenerateTags()
 	let sitepath = FetchSitePath()
-	exe "! ~/.vim/scripts/ctags.sh ".sitepath
+	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
+	redraw!
+	echo "Generated tags for ".sitepath
 endfunction
 
 function! CleanForMamp()
 	let sitepath = FetchSitePath()
-	exe "! sudo ~/.vim/scripts/mamp.sh ".sitepath
+	silent exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
+	redraw!
+	echo "Updated Permissions for ".sitepath."**/*"
 endfunction
 
 function! OpenTerminal()
 	let sitepath = FetchSitePath()
-	exe "silent ! open -a Terminal ".sitepath
+	silent exe "!open -a Terminal ".sitepath
+	redraw!
 endfunction
-
-function! CmdLine(str)
-	exe "menu Foo.Bar :" . a:str
-	emenu Foo.Bar
-	unmenu Foo
-endfunction 
 
 " Returns true if paste mode is enabled
 function! HasPaste()
@@ -379,26 +378,6 @@ function! HasPaste()
 	return ''
 endfunction
 
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-	 buffer #
-   else
-	 bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-	 new
-   endif
-
-   if buflisted(l:currentBufNum)
-	 execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP Sytax Highlight for Comments
