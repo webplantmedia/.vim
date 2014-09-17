@@ -2,7 +2,6 @@
 
 Easily duplicate vim environment on any computer
 
-
 ##Installation##
 
 Remove or backup your ~/.vim folder.
@@ -75,7 +74,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###[Install Patched Ctags](https://github.com/shawncplus/phpcomplete.vim/wiki/Patched-ctags)###
 
-##Shortcuts##
+##Cheat Sheet##
 
 | Shortcut  | Description |
 | :------------: |:----------------|
@@ -85,6 +84,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 | F10 | Toggle line highlight |
 | F11 | Show whitespaces, tabs, and endlines |
 | [count]\<leader\>cc | Comment out the current line or text selected in visual mode. |
+| Shift+8 | Search selected text and find it elsewhere in the file. |
 
 ##TODO...##
 
