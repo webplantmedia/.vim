@@ -77,7 +77,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 ##Shortcuts##
 
 | Shortcut  | Description |
-| ------------: |:----------------|
+| :------------: |:----------------|
 | F7 | Toggle NERDTree |
 | F8 | Toggle line wrap |
 | F9 | Toggle search highlight |
