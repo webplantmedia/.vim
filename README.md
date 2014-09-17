@@ -70,6 +70,20 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###[WordPress.vim](https://github.com/dsawardekar/wordpress.vim)###
 
+##Recommended Actions##
+
+###[Install Patched Ctags](https://github.com/shawncplus/phpcomplete.vim/wiki/Patched-ctags)###
+
+##Shortcuts##
+
+| Shortcut  | Description |
+| ------------: |:----------------|
+| F7 | Toggle NERDTree |
+| F8 | Toggle line wrap |
+| F9 | Toggle search highlight |
+| F10 | Toggle line highlight |
+| F11 | Show whitespaces, tabs, and endlines |
+
 ##TODO...##
 
 * Need better jquery support
