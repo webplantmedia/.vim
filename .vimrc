@@ -359,7 +359,7 @@ endfunction
 
 function! CleanForMamp()
 	let sitepath = FetchSitePath()
-	silent exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
+	exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
 	redraw!
 	echo "Updated Permissions for ".sitepath."**/*"
 endfunction
