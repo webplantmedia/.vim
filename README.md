@@ -88,11 +88,15 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###Commenting###
 
+| Shortcut  | Description |
+| :------------------: |:----------------|
 | \<leader\>cc | Comment out the current line or text selected in visual mode. |
 | \<leader\>cf | Comments function or class in a pretty style. Cursor must be on function/class definition. |
 
 ###Navigation###
 
+| Shortcut  | Description |
+| :------------------: |:----------------|
 | \<leader\>6 | Switch to alternate buffer. |
 | \<C-P\> | Open up fuzzy path finder. |
 | \<leader\>b | Open up buffer list. |
@@ -103,11 +107,15 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ###Edits###
 
+| Shortcut  | Description |
+| :------------------: |:----------------|
 | >> | Shifts current line or selected lines rightwards. |
 | << | Shifts current line or selected lines leftward. |
 
 ###Scripts###
 
+| Shortcut  | Description |
+| :------------------: |:----------------|
 | \<leader\>gt | Generate tags under current working directory. Must have exuberant-ctags command linking to ctags process. |
 | \<leader\>m | Update permission file of site directory to work with MAMP. |
 
