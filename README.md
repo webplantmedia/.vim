@@ -76,6 +76,8 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ##Cheat Sheet##
 
+###Toggles###
+
 | Shortcut  | Description |
 | :------------------: |:----------------|
 | F7 | Toggle NERDTree |
@@ -83,11 +85,31 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 | F9 | Toggle search highlight |
 | F10 | Toggle line highlight |
 | F11 | Show whitespaces, tabs, and endlines |
+
+###Commenting###
+
 | \<leader\>cc | Comment out the current line or text selected in visual mode. |
 | \<leader\>cf | Comments function or class in a pretty style. Cursor must be on function/class definition. |
+
+###Navigation###
+
+| \<leader\>6 | Switch to alternate buffer. |
+| \<C-P\> | Open up fuzzy path finder. |
+| \<leader\>b | Open up buffer list. |
+| \<leader\>B | Close up buffer list. |
 | * | Search selected text and find it elsewhere in the file. |
+| n | Search next selected text. |
+| N | Search previous selected text. |
+
+###Edits###
+
 | >> | Shifts current line or selected lines rightwards. |
 | << | Shifts current line or selected lines leftward. |
+
+###Scripts###
+
+| \<leader\>gt | Generate tags under current working directory. Must have exuberant-ctags command linking to ctags process. |
+| \<leader\>m | Update permission file of site directory to work with MAMP. |
 
 ##TODO...##
 
