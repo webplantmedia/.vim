@@ -2,6 +2,7 @@
 
 Easily duplicate vim environment on any computer
 
+
 ##Installation##
 
 Remove or backup your ~/.vim folder.
