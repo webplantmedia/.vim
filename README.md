@@ -10,7 +10,7 @@ Remove or backup your ~/.vim folder.
 $ mv ~/.vim ~/.vim.old
 ```
 
-Clone this repo into your home directory.
+Clone this repository and all submodules into your home directory.
 
 ```
 git clone --recursive https://github.com/webplantmedia/.vim.git ~/.vim
@@ -85,9 +85,9 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 | F11 | Show whitespaces, tabs, and endlines |
 | \<leader\>cc | Comment out the current line or text selected in visual mode. |
 | \<leader\>cf | Comments function or class in a pretty style. Cursor must be on function/class definition. |
-| Shift+8 | Search selected text and find it elsewhere in the file. |
-| Shift+>&nbsp;Shift+> | Shifts current line or selected lines rightwards. |
-| Shift+<&nbsp;Shift+< | Shifts current line or selected lines leftward. |
+| * | Search selected text and find it elsewhere in the file. |
+| >> | Shifts current line or selected lines rightwards. |
+| << | Shifts current line or selected lines leftward. |
 
 ##TODO...##
 
