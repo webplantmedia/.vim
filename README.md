@@ -76,6 +76,8 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ##Cheat Sheet##
 
+VIM defaults the `<leader>` to be the `\` key
+
 ###Toggles###
 
 | Shortcut  | Description |
