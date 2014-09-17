@@ -254,9 +254,8 @@ nnoremap <F11> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
-let NERDTreeWinSize=50
+let NERDTreeWinSize=40
 "let NERDTreeShowHidden=1
-"let NERDTreeWinSize = 40
 "let NERDTreeMouseMode = 1
 
 
