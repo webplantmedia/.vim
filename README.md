@@ -13,7 +13,7 @@ $ mv ~/.vim ~/.vim.old
 Clone this repo into your home directory.
 
 ```
-git clone https://github.com/webplantmedia/.vim.git ~/.vim
+git clone --recursive https://github.com/webplantmedia/.vim.git ~/.vim
 ```
 
 Create a symbolic link to ~/.vim/.vimrc and ~/.vim/.gvimrc
