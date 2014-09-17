@@ -87,7 +87,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 | \<leader\>cf | Comments function or class in a pretty style. Cursor must be on function/class definition. |
 | Shift+8 | Search selected text and find it elsewhere in the file. |
 | Shift+>&nbsp;Shift+> | Shifts current line or selected lines rightwards. |
-| Shift+< Shift+< | Shifts current line or selected lines leftward. |
+| Shift+<&nbsp;Shift+< | Shifts current line or selected lines leftward. |
 
 ##TODO...##
 
