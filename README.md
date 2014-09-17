@@ -114,7 +114,7 @@ VIM defaults the `<leader>` to be the `\` key. This vim configuration file remap
 | >> | Shifts current line or selected lines rightwards. |
 | << | Shifts current line or selected lines leftward. |
 
-###Scripts###
+###Run Scripts###
 
 | Shortcut  | Description |
 | :------------------: |:----------------|
