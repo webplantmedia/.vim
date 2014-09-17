@@ -83,7 +83,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 | F9 | Toggle search highlight |
 | F10 | Toggle line highlight |
 | F11 | Show whitespaces, tabs, and endlines |
-| [count]<leader>cc | Comment out the current line or text selected in visual mode. |
+| [count]\<leader\>cc | Comment out the current line or text selected in visual mode. |
 
 ##TODO...##
 
