@@ -76,7 +76,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 
 ##Cheat Sheet##
 
-VIM defaults the `<leader>` to be the `\` key
+VIM defaults the `<leader>` to be the `\` key. This vim configuration file remaps the `<leader>` to be the `,` key.
 
 ###Toggles###
 
