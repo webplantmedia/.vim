@@ -30,6 +30,14 @@ $ cp ~/.vim/.vimrc ~/.vimrc
 $ cp ~/.vim/.gvimrc ~/.gvimrc
 ```
 
+##Updating##
+
+Update to latest version
+
+```
+$ git pull origin
+```
+
 ##Package Manager Used##
 
 ###[pathogen.vim](https://github.com/tpope/vim-pathogen)###
