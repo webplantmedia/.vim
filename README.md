@@ -35,6 +35,7 @@ $ cp ~/.vim/.gvimrc ~/.gvimrc
 Update to latest version
 
 ```
+$ cd ~/.vim
 $ git pull origin --recurse-submodules
 ```
 
