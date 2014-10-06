@@ -242,6 +242,7 @@ nnoremap <leader>h :call ConvertPHPToHTML()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " F-Keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F6> :set ignorecase!<CR>
 nnoremap <F7> :NERDTreeToggle<CR>
 nnoremap <F8> :set wrap!<CR>:set lbr<CR>
 nnoremap <F9> :set hlsearch! hlsearch?<CR>
