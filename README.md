@@ -91,6 +91,7 @@ VIM defaults the `<leader>` to be the `\` key. This vim configuration file remap
 
 | Shortcut  | Description |
 | :------------------: |:----------------|
+| F6 | Toggle case sensitivity when searching |
 | F7 | Toggle NERDTree |
 | F8 | Toggle line wrap |
 | F9 | Toggle search highlight |
