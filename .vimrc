@@ -59,6 +59,9 @@ set cmdheight=2
 " A buffer becomes hidden when it is abandoned
 set hid
 
+" Preserve column cursor position when switching buffers
+set nostartofline
+
 " Ignore case when searching
 set ignorecase
 
@@ -232,6 +235,9 @@ nnoremap <leader>O :call OpenTerminal()<CR>
 " tags - generate tags
 nnoremap <leader>gt :call GenerateTags()<CR>
 
+" patch - generate patch
+nnoremap <leader>gp :call GeneratePatch()<CR>
+
 " mamp - clean dir for mamp
 nnoremap <leader>m :call CleanForMamp()<CR>
 
@@ -355,6 +361,13 @@ function! GenerateTags()
 	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
 	redraw!
 	echo "Generated tags for ".sitepath
+endfunction
+
+function! GeneratePatch()
+	let sitepath = FetchSitePath()
+	silent exe "!~/.vim/scripts/patch.sh ".sitepath
+	redraw!
+	echo "Generated patch for ".sitepath
 endfunction
 
 function! CleanForMamp()
