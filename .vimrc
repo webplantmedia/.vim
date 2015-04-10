@@ -184,9 +184,11 @@ map <silent> <leader><cr> :noh<cr>
 " map <leader>da :bufdo bd<cr>
 
 " Useful mappings for managing tabs
-" map <leader>tn :tabnew<cr>
-" map <leader>to :tabonly<cr>
-" map <leader>tc :tabclose<cr>
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>t[ :tabprevious<cr>
+map <leader>t] :tabnext<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
