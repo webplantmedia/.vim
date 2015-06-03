@@ -181,7 +181,7 @@ map <silent> <leader><cr> :noh<cr>
 " map <leader>l :ls<cr>
 
 " Close all the buffers
-" map <leader>da :bufdo bd<cr>
+map <leader>da :bufdo bd<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -227,7 +227,6 @@ set statusline+=\ %P    "percent through file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -250,12 +249,12 @@ nnoremap <leader>h :call ConvertPHPToHTML()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " F-Keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F6> :set ignorecase!<CR>
-nnoremap <F7> :NERDTreeToggle<CR>
-nnoremap <F8> :set wrap!<CR>:set lbr<CR>
-nnoremap <F9> :set hlsearch! hlsearch?<CR>
-nnoremap <F10> :set cursorline! cursorline?<CR>
-nnoremap <F11> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+nnoremap <leader>ic :set ignorecase!<CR>
+nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>wr :set wrap!<CR>:set lbr<CR>
+nnoremap <leader>hs :set hlsearch! hlsearch?<CR>
+nnoremap <leader>cl :set cursorline! cursorline?<CR>
+nnoremap <leader>sl :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
