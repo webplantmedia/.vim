@@ -263,6 +263,7 @@ nnoremap <leader>sl :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 let NERDTreeWinSize=40
+let NERDTreeBookmarksSort=0
 "let NERDTreeShowHidden=1
 "let NERDTreeMouseMode = 1
 
