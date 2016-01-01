@@ -71,13 +71,9 @@ $ git pull origin --recurse-submodules
 
 ###[PHP VIM](https://github.com/StanAngeloff/php.vim)###
 
-###[Open Browser](https://github.com/tyru/open-browser.vim)###
-
 ###[VIM Markdown](https://github.com/tpope/vim-markdown)###
 
 ###[PHP Complete](https://github.com/shawncplus/phpcomplete.vim)###
-
-###[WordPress.vim](https://github.com/dsawardekar/wordpress.vim)###
 
 ##Recommended Actions##
 
@@ -91,12 +87,13 @@ VIM defaults the `<leader>` to be the `\` key. This vim configuration file remap
 
 | Shortcut  | Description |
 | :------------------: |:----------------|
-| F6 | Toggle case sensitivity when searching |
-| F7 | Toggle NERDTree |
-| F8 | Toggle line wrap |
-| F9 | Toggle search highlight |
-| F10 | Toggle line highlight |
-| F11 | Show whitespaces, tabs, and endlines |
+| \<leader\>ic | Toggle case sensitivity when searching. |
+| \<leader\>e | Toggle NERDTree. |
+| \<leader\>ww | Toggle line wrap. |
+| \<leader\>hs | Toggle search highlight. |
+| \<leader\>hl | Toggle line highlight. |
+| \<leader\>sl | Toggle display of whitespaces, tabs, and endlines. |
+| \<leader\>pp | Toggle paste mode on and off. |
 
 ###Commenting###
 
@@ -123,13 +120,23 @@ VIM defaults the `<leader>` to be the `\` key. This vim configuration file remap
 | :------------------: |:----------------|
 | >> | Shifts current line or selected lines rightwards. |
 | << | Shifts current line or selected lines leftward. |
+| \<leader\>fp | Set filetype to php. |
+| \<leader\>fh | Set filetype to html. |
+| \<leader\>2 | Convenient way to convert spaces to tab with 2 spaces. |
+| \<leader\>4 | Convenient way to convert spaces to tab with 4 spaces. |
+| \<leader\>da | Delete all buffers. |
+| \<leader\>cd | Switch CWD to the directory of the open buffer. |
+| \<leader\>rm | Remove the Windows ^M - when the encodings gets messed up. |
 
 ###Run Scripts###
 
 | Shortcut  | Description |
 | :------------------: |:----------------|
+| \<leader\>O | Open Terminal. |
 | \<leader\>gt | Generate tags under current working directory. Must have exuberant-ctags command linking to ctags process. |
+| \<leader\>gp | Generate git difference patch file for bug fixes. Saves in ~/Downloads/ with name "ticket-id.patch". |
 | \<leader\>m | Update permission file of site directory to work with MAMP. |
+| \<leader\>u | FTP Upload via FTP Transmit. |
 
 ##TODO...##
 
