@@ -184,11 +184,11 @@ map <silent> <leader><cr> :noh<cr>
 map <leader>da :bufdo bd<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>t[ :tabprevious<cr>
-map <leader>t] :tabnext<cr>
+" map <leader>tn :tabnew<cr>
+" map <leader>to :tabonly<cr>
+" map <leader>tc :tabclose<cr>
+" map <leader>t[ :tabprevious<cr>
+" map <leader>t] :tabnext<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -311,14 +311,8 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>rm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scripbble
-map <leader>q :e ~/buffer<cr>
-
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
-
-" Search in Codex for WordPress
-nnoremap <leader>co :Wcodexsearch<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -336,6 +330,7 @@ nnoremap <leader>co :Wcodexsearch<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Work in progress
 function! ConvertPHPToHTML()
 	" e flag supresses warning
 	exe ":.s/echo\\s\\+\\'//ge"
