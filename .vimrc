@@ -243,7 +243,7 @@ nnoremap <leader>gp :call GeneratePatch()<CR>
 nnoremap <leader>m :call CleanForMamp()<CR>
 
 " convert convert to (h)html
-nnoremap <leader>h :call ConvertPHPToHTML()<CR>
+" nnoremap <leader>h :call ConvertPHPToHTML()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -251,9 +251,9 @@ nnoremap <leader>h :call ConvertPHPToHTML()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>ic :set ignorecase!<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
-nnoremap <leader>wr :set wrap!<CR>:set lbr<CR>
+nnoremap <leader>ww :set wrap!<CR>:set lbr<CR>
 nnoremap <leader>hs :set hlsearch! hlsearch?<CR>
-nnoremap <leader>cl :set cursorline! cursorline?<CR>
+nnoremap <leader>hl :set cursorline! cursorline?<CR>
 nnoremap <leader>sl :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 
