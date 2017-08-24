@@ -151,7 +151,8 @@ let g:PHP_vintage_case_default_indent = 1
 let g:PHP_removeCRwhenUnix = 1
 
 nmap <leader>fp :set filetype=php<cr>
-nmap <leader>fh :set filetype=html<cr>
+nmap <leader>fh :set filetype=html<cr>:set syntax=php<cr>
+nmap <leader>fc :set filetype=css<cr>:set syntax=php<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -349,12 +350,20 @@ function! FetchSitePath()
 	let fullpath = expand('%:p')
 	let nameoffile = @%
 	let sitepath = substitute(fullpath, nameoffile, "", "")
+	" echo fullpath . "=" . nameoffile
 
 	return sitepath
 endfunction
 
+function! CompileSASS()
+	let sitepath = FetchSitePath()
+	exe "!sass ".sitepath."sass/style.scss ".sitepath."style.css -C --sourcemap=none"
+	redraw!
+endfunction
+
 function! GenerateTags()
 	let sitepath = FetchSitePath()
+	let sitepath = substitute( sitepath, "wp-content/themes/wpcanvas2/$", "", "" )
 	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
 	redraw!
 	echo "Generated tags for ".sitepath
