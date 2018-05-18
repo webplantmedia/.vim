@@ -183,6 +183,7 @@ map <silent> <leader><cr> :noh<cr>
 
 " Close all the buffers
 map <leader>da :bufdo bd<cr>
+map <leader>dq :bufdo bd!<cr>:q<cr>
 
 " Useful mappings for managing tabs
 " map <leader>tn :tabnew<cr>
@@ -364,6 +365,11 @@ endfunction
 function! GenerateTags()
 	let sitepath = FetchSitePath()
 	let sitepath = substitute( sitepath, "wp-content/themes/wpcanvas2/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/angie-makes-design/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/crimson-rose/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/brimstone/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/angiemakesdesign/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/_am/$", "", "" )
 	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
 	redraw!
 	echo "Generated tags for ".sitepath
