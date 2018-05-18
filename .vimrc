@@ -94,7 +94,7 @@ syntax on
 
 set guifont=Courier\ New:h16
 set background=dark
-colorscheme desert256
+colorscheme desert256v3
 
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -186,11 +186,11 @@ map <leader>da :bufdo bd<cr>
 map <leader>dq :bufdo bd!<cr>:q<cr>
 
 " Useful mappings for managing tabs
-" map <leader>tn :tabnew<cr>
+map <leader>tn :tabnew<cr>
+map <leader>tq :tabclose<cr>
+map [t :tabprevious<cr>
+map ]t :tabnext<cr>
 " map <leader>to :tabonly<cr>
-" map <leader>tc :tabclose<cr>
-" map <leader>t[ :tabprevious<cr>
-" map <leader>t] :tabnext<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -200,6 +200,11 @@ map <leader>dq :bufdo bd!<cr>:q<cr>
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 map <leader>6 :b #<cr>
+
+map [q :cnext<cr>
+map ]q :cprev<cr>
+map [Q :clast<cr>
+map ]Q :cfirst<cr>
 
 """"""""""""""""""""""""""""""
 " Status line
