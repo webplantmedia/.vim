@@ -46,3 +46,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = https://webplantmedia@github.com/webplantmedia/vim-colorschemes.git
