@@ -22,9 +22,6 @@
 [submodule "bundle/simple-javascript-indenter"]
 	path = bundle/simple-javascript-indenter
 	url = https://webplantmedia@github.com/jiangmiao/simple-javascript-indenter.git
-[submodule "bundle/colorschemes"]
-	path = bundle/colorschemes
-	url = https://webplantmedia@github.com/flazz/vim-colorschemes.git
 [submodule "bundle/transmit-ftp"]
 	path = bundle/transmit-ftp
 	url = https://webplantmedia@github.com/webplantmedia/transmit-ftp.git
