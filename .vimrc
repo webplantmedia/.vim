@@ -190,6 +190,8 @@ map <leader>tn :tabnew<cr>
 map <leader>tq :tabclose<cr>
 map [t :tabprevious<cr>
 map ]t :tabnext<cr>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 " map <leader>to :tabonly<cr>
 
 " Opens a new tab with the current buffer's path
@@ -353,12 +355,9 @@ function! ConvertPHPToHTML()
 endfunction
 
 function! FetchSitePath()
-	let fullpath = expand('%:p')
-	let nameoffile = @%
-	let sitepath = substitute(fullpath, nameoffile, "", "")
-	" echo fullpath . "=" . nameoffile
+	let fullpath = getcwd()
 
-	return sitepath
+	return fullpath
 endfunction
 
 function! CompileSASS()
@@ -369,12 +368,7 @@ endfunction
 
 function! GenerateTags()
 	let sitepath = FetchSitePath()
-	let sitepath = substitute( sitepath, "wp-content/themes/wpcanvas2/$", "", "" )
-	let sitepath = substitute( sitepath, "wp-content/themes/angie-makes-design/$", "", "" )
-	let sitepath = substitute( sitepath, "wp-content/themes/crimson-rose/$", "", "" )
-	let sitepath = substitute( sitepath, "wp-content/themes/brimstone/$", "", "" )
-	let sitepath = substitute( sitepath, "wp-content/themes/angiemakesdesign/$", "", "" )
-	let sitepath = substitute( sitepath, "wp-content/themes/_am/$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/themes/.*$", "", "" )
 	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
 	redraw!
 	echo "Generated tags for ".sitepath
