@@ -154,6 +154,12 @@ nmap <leader>fp :set filetype=php<cr>
 nmap <leader>fh :set filetype=html<cr>:set syntax=php<cr>
 nmap <leader>fc :set filetype=css<cr>:set syntax=php<cr>
 
+" mappings for Tabularize
+" vimcasts.org/episodes/aligning-text-with-tabular-vim/
+nmap <leader>a= :Tabularize /=<CR>
+vmap <leader>a= :Tabularize /=<CR>
+nmap <leader>a: :Tabularize /:\zs<CR>
+vmap <leader>a: :Tabularize /:\zs<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around, tabs, windows and buffers
