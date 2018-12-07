@@ -5,7 +5,7 @@ then
 else
 	args=("$@")
 	cd ${args[0]}
-	find . -type f -exec chmod 666 {} \;
-	find . -type d -exec chmod 777 {} \;
+	find . -type f -exec chmod 644 {} \;
+	find . -type d -exec chmod 755 {} \;
 	# find . -exec chown chris:_www {} \;
 fi

@@ -242,6 +242,8 @@ set statusline+=\ %P    "percent through file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+set wildignore+=node_modules,vendor,*.map
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -305,7 +307,7 @@ nmap <leader>u :call TransmitFtpSendFile()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ack
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+nnoremap <Leader>aa :Ack!<Space>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
@@ -329,6 +331,8 @@ noremap <Leader>rm mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" Get VIM to copy to system clipboard?
+set clipboard+=unnamed  " use the clipboards of vim and win
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
