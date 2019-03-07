@@ -196,8 +196,6 @@ map <leader>tn :tabnew<cr>
 map <leader>tq :tabclose<cr>
 map [t :tabprevious<cr>
 map ]t :tabnext<cr>
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
 " map <leader>to :tabonly<cr>
 
 " Opens a new tab with the current buffer's path
