@@ -242,6 +242,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set wildignore+=node_modules,vendor,*.map
 
+let g:ctrlp_working_path_mode = 'a'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
