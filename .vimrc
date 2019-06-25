@@ -213,13 +213,13 @@ map [Q :clast<cr>
 map ]Q :cfirst<cr>
 
 " http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-autocmd User fugitive
-  \ if get(b:, 'fugitive_type', '') =~# '^\%(tree\|blob\)$' |
-  \   nnoremap <buffer> .. :edit %:h<CR> |
-  \ endif
+" autocmd User fugitive
+  " \ if get(b:, 'fugitive_type', '') =~# '^\%(tree\|blob\)$' |
+  " \   nnoremap <buffer> .. :edit %:h<CR> |
+  " \ endif
 
 " http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
-autocmd BufReadPost fugitive://* set bufhidden=delete
+" autocmd BufReadPost fugitive://* set bufhidden=delete
 
 """"""""""""""""""""""""""""""
 " Status line
@@ -237,7 +237,7 @@ set statusline+=%{&ff}] "file format
 set statusline+=%h      "help file flag
 set statusline+=%m      "modified flag
 set statusline+=%r      "read only flag
-set statusline+=%{fugitive#statusline()}
+" set statusline+=%{fugitive#statusline()}
 set statusline+=%y      "filetype
 set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
