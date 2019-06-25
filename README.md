@@ -4,7 +4,18 @@ Easily duplicate vim environment on any computer
 
 ## Installation
 
-Remove or backup your ~/.vim folder.
+Install a good coding font. I am using Mac's 'SF Mono' font. Here is how to install it.
+
+[https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d](https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d)
+
+If you want to use a good default font, you can change the following line of code in the `.gvimrc` file in this repo:
+
+```
+" set guifont=SF\ Mono:h15
+set guifont=Courier\ New:h16
+```
+
+Next, remove or backup your ~/.vim folder.
 
 ```
 $ mv ~/.vim ~/.vim.old
