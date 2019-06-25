@@ -4,6 +4,18 @@ Easily duplicate vim environment on any computer
 
 ## Installation
 
+If you are on a Mac, you can use Homebrew to install MacVim
+
+```
+brew install macvim
+```
+
+Link your MacVim to your `Applications` folder
+
+```
+'ln -Fs `find /usr/local -name "MacVim.app"` /Applications/MacVim.app'
+```
+
 Install a good coding font. I am using Mac's 'SF Mono' font. Here is how to install it.
 
 [https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d](https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d)
@@ -41,9 +53,11 @@ $ cp ~/.vim/.vimrc ~/.vimrc
 $ cp ~/.vim/.gvimrc ~/.gvimrc
 ```
 
+And that's it! You now have a good `.vimrc` file with a good set of vim plugins that will help you write code more efficiently.
+
 ## Updating
 
-Update to latest version
+Update your `.vim` repo and all your vim plugins to the latest versions.
 
 ```
 $ cd ~/.vim
