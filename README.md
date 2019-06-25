@@ -77,7 +77,7 @@ $ git pull origin --recurse-submodules
 
 ##Recommended Actions##
 
-###[Install Patched Ctags](https://github.com/shawncplus/phpcomplete.vim/wiki/Patched-ctags)###
+###[Homebrew Tap for Universal Ctags](https://github.com/universal-ctags/homebrew-universal-ctags)###
 
 ##Cheat Sheet##
 
