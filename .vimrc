@@ -212,6 +212,15 @@ map ]q :cprev<cr>
 map [Q :clast<cr>
 map ]Q :cfirst<cr>
 
+" http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
+autocmd User fugitive
+  \ if get(b:, 'fugitive_type', '') =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+
+" http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
 """"""""""""""""""""""""""""""
 " Status line
 """"""""""""""""""""""""""""""
