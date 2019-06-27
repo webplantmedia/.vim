@@ -16,7 +16,7 @@ Link your MacVim to your `Applications` folder
 'ln -Fs `find /usr/local -name "MacVim.app"` /Applications/MacVim.app'
 ```
 
-Install a good coding font. I am using Mac's 'SF Mono' font. [Here](https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d) is how to install it:
+Install a good coding font. I am using Mac's 'SF Mono' font. [Here](https://medium.com/@deepak.gulati/using-sf-mono-in-emacs-6712c45b2a6d) is how to install it. It is embedded inside the Terminal.app bundle and thus not available to other apps. That’s easily remedied. From terminal run:
 
 ```
 $ open /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/
