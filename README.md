@@ -57,7 +57,7 @@ $ cp ~/.vim/.vimrc ~/.vimrc
 $ cp ~/.vim/.gvimrc ~/.gvimrc
 ```
 
-You now have a good `.vimrc` file with a good set of vim plugins that will help you write code more efficiently. Last thing to do is to intall `ctags`. [This](https://github.com/universal-ctags/homebrew-universal-ctags) is currently the best way of doing it:
+You now have a good `.vimrc` file with a good set of vim plugins that will help you write code more efficiently. Last thing to do is to install `ctags`. [This](https://github.com/universal-ctags/homebrew-universal-ctags) is currently the best way of doing it:
 
 ```
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
