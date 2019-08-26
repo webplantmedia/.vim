@@ -269,7 +269,7 @@ nnoremap <leader>gt :call GenerateTags()<CR>
 nnoremap <leader>gp :call GeneratePatch()<CR>
 
 " mamp - clean dir for mamp
-nnoremap <leader>m :call CleanForMamp()<CR>
+" nnoremap <leader>m :call CleanForMamp()<CR>
 
 " convert convert to (h)html
 " nnoremap <leader>h :call ConvertPHPToHTML()<CR>
@@ -403,12 +403,12 @@ function! GeneratePatch()
 	echo "Generated patch for ".sitepath
 endfunction
 
-function! CleanForMamp()
-	let sitepath = FetchSitePath()
-	exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
-	redraw!
-	echo "Updated Permissions for ".sitepath."**/*"
-endfunction
+" function! CleanForMamp()
+	" let sitepath = FetchSitePath()
+	" exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
+	" redraw!
+	" echo "Updated Permissions for ".sitepath."**/*"
+" endfunction
 
 function! OpenTerminal()
 	let sitepath = FetchSitePath()
