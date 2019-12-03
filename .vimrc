@@ -1,8 +1,28 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen
+" Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
 
+Plug 'mileszs/ack.vim'
+Plug 'webplantmedia/vim-colorschemes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tobyS/pdv'
+Plug 'StanAngeloff/php.vim'
+Plug 'shawncplus/phpcomplete.vim'
+Plug 'godlygeek/tabular'
+Plug 'webplantmedia/transmit-ftp'
+Plug 'SirVer/ultisnips'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'tpope/vim-markdown'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'tobyS/vmustache'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+
+" Initialize plugin system
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
