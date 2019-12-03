@@ -391,6 +391,7 @@ endfunction
 function! GenerateTags()
 	let sitepath = FetchSitePath()
 	let sitepath = substitute( sitepath, "wp-content/themes/.*$", "", "" )
+	let sitepath = substitute( sitepath, "wp-content/plugins/.*$", "", "" )
 	silent exe "!~/.vim/scripts/ctags.sh ".sitepath
 	redraw!
 	echo "Generated tags for ".sitepath
