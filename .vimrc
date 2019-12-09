@@ -20,6 +20,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Initialize plugin system
 call plug#end()
@@ -158,6 +159,8 @@ set wrap "Wrap lines
 " convenient way to convert spaces to tab
 nnoremap <leader>2 :set tabstop=2 shiftwidth=2 softtabstop=2<CR>:set noexpandtab<CR>:%retab!<CR>
 nnoremap <leader>4 :set tabstop=4 shiftwidth=4 softtabstop=4<CR>:set noexpandtab<CR>:%retab!<CR>
+nnoremap <leader>xt :set expandtab<CR>:%retab!<CR>
+nnoremap <leader>rt :set noexpandtab<CR>:%retab!<CR>
 
 " In Brief Mode script will not indent more than one shiftwidth each line.
 " https://github.com/vim-scripts/Simple-Javascript-Indenter
@@ -286,14 +289,7 @@ nnoremap <leader>O :call OpenTerminal()<CR>
 nnoremap <leader>gt :call GenerateTags()<CR>
 
 " patch - generate patch
-nnoremap <leader>gp :call GeneratePatch()<CR>
-
-" mamp - clean dir for mamp
-" nnoremap <leader>m :call CleanForMamp()<CR>
-
-" convert convert to (h)html
-" nnoremap <leader>h :call ConvertPHPToHTML()<CR>
-
+" nnoremap <leader>gp :call GeneratePatch()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " F-Keys
@@ -381,31 +377,10 @@ set clipboard+=unnamed  " use the clipboards of vim and win
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Work in progress
-function! ConvertPHPToHTML()
-	" e flag supresses warning
-	exe ":.s/echo\\s\\+\\'//ge"
-	exe ":.s/\\'\\;//ge"
-	exe ":.s/\\'\\./<?php echo /ge"
-	exe ":.s/\\.\\'/; ?>/ge"
-	exe ":.s/\\(^\\s*\\)\\(\\$[A-Za-z_]*.*$\\)/\\1<?php \\2 ?>/ge"
-	exe ":.s/\\(^\\s*\\)\\(\\/\\/.*$\\)/\\1<?php \\2 ?>/ge"
-	exe ":.s/echo selected(\\([A-Za-z0-9\\[\\]_\\' \\$]*\\),\\s*\\([A-Za-z0-9\\[\\]_\\' \\$]*\\),\\s*false\\s*)/selected(\\1, \\2)/ge"
-
-	exe ":.s/\\(^\\s*\\)foreach\\(.*\\){\\s*$/\\1<?php foreach\\2: ?>/ge"
-	exe ":.s/\\(^\\s*\\)if\\(.*$\\)/\\1<?php if\\2 : ?>/ge"
-endfunction
-
 function! FetchSitePath()
 	let fullpath = getcwd()
 
 	return fullpath
-endfunction
-
-function! CompileSASS()
-	let sitepath = FetchSitePath()
-	exe "!sass ".sitepath."sass/style.scss ".sitepath."style.css -C --sourcemap=none"
-	redraw!
 endfunction
 
 function! GenerateTags()
@@ -423,13 +398,6 @@ function! GeneratePatch()
 	redraw!
 	echo "Generated patch for ".sitepath
 endfunction
-
-" function! CleanForMamp()
-	" let sitepath = FetchSitePath()
-	" exe "!sudo ~/.vim/scripts/mamp.sh ".sitepath
-	" redraw!
-	" echo "Updated Permissions for ".sitepath."**/*"
-" endfunction
 
 function! OpenTerminal()
 	let sitepath = FetchSitePath()
