@@ -83,35 +83,41 @@ Update your `.vim` repo and all your vim plugins to the latest versions.
 
 ## Plugins Used
 
-### [Transmit FTP](https://github.com/webplantmedia/transmit-ftp)
+### [mileszs/ack.vim](https://github.com/mileszs/ack.vim)
 
-### [Simple Javascript Indenter](https://github.com/jiangmiao/simple-javascript-indenter)
+### [webplantmedia/vim-colorschemes](https://github.com/webplantmedia/vim-colorschemes)
 
-### [PDV](https://github.com/tobyS/pdv)
+### [ctrlpvim/ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 
-### [vmustache](https://github.com/tobyS/vmustache)
+### [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 
-### [UltiSnips](https://github.com/SirVer/ultisnips)
+### [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 
-### [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+### [tobyS/pdv](https://github.com/tobyS/pdv)
 
-### [ack.vim](https://github.com/mileszs/ack.vim)
+### [StanAngeloff/php.vim](https://github.com/StanAngeloff/php.vim)
 
-### [The NERD Tree](https://github.com/scrooloose/nerdtree)
+### [shawncplus/phpcomplete.vim](https://github.com/shawncplus/phpcomplete.vim)
 
-### [NERD Commenter](https://github.com/scrooloose/nerdcommenter)
+### [godlygeek/tabular](https://github.com/godlygeek/tabular)
 
-### [VIM Visual Star Search](https://github.com/nelstrom/vim-visual-star-search)
+### [webplantmedia/transmit-ftp](https://github.com/webplantmedia/transmit-ftp)
 
-### [Color Schemes](https://github.com/flazz/vim-colorschemes.git)
+### [SirVer/ultisnips](https://github.com/SirVer/ultisnips)
 
-### [Buffergator](https://github.com/jeetsukumaran/vim-buffergator)
+### [jeetsukumaran/vim-buffergator](https://github.com/jeetsukumaran/vim-buffergator)
 
-### [PHP VIM](https://github.com/StanAngeloff/php.vim)
+### [tpope/vim-markdown](https://github.com/tpope/vim-markdown)
 
-### [VIM Markdown](https://github.com/tpope/vim-markdown)
+### [nelstrom/vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search)
 
-### [PHP Complete](https://github.com/shawncplus/phpcomplete.vim)
+### [tobyS/vmustache](https://github.com/tobyS/vmustache)
+
+### [yuezk/vim-js](https://github.com/yuezk/vim-js)
+
+### [maxmellon/vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty)
+
+### [prettier/vim-prettier](https://github.com/prettier/vim-prettier)
 
 ## Recommended Actions
 
