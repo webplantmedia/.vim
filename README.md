@@ -40,7 +40,7 @@ $ mv ~/.vim ~/.vim.old
 Clone this repository and all submodules into your home directory.
 
 ```
-git clone --recursive https://github.com/webplantmedia/.vim.git ~/.vim
+git clone https://github.com/webplantmedia/.vim.git ~/.vim
 ```
 
 Create a symbolic link to ~/.vim/.vimrc and ~/.vim/.gvimrc
@@ -63,18 +63,23 @@ You now have a good `.vimrc` file with a good set of vim plugins that will help 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
+Inside VIM, run the following command
+
+```
+:PlugInstall
+```
+
 ## Updating
 
 Update your `.vim` repo and all your vim plugins to the latest versions.
 
 ```
-$ cd ~/.vim
-$ git pull origin --recurse-submodules
+:PlugUpdate
 ```
 
 ## Package Manager Used
 
-### [pathogen.vim](https://github.com/tpope/vim-pathogen)
+### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ## Plugins Used
 
