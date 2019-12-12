@@ -63,7 +63,7 @@ You now have a good `.vimrc` file with a good set of vim plugins that will help 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
-Inside VIM, run the following command
+For one of the plugins, make sure you have yarn installed, and that you can run the command `yarn install`. Afterwards, inside VIM, run the following command
 
 ```
 :PlugInstall
