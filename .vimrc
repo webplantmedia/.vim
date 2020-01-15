@@ -157,8 +157,8 @@ set cindent
 set wrap "Wrap lines
 
 " convenient way to convert spaces to tab
-nnoremap <leader>2 :set tabstop=2 shiftwidth=2 softtabstop=2<CR>:set noexpandtab<CR>:%retab!<CR>
-nnoremap <leader>4 :set tabstop=4 shiftwidth=4 softtabstop=4<CR>:set noexpandtab<CR>:%retab!<CR>
+nnoremap <leader>t2 :set tabstop=2 shiftwidth=2 softtabstop=2<CR>:set noexpandtab<CR>:%retab!<CR>
+nnoremap <leader>t4 :set tabstop=4 shiftwidth=4 softtabstop=4<CR>:set noexpandtab<CR>:%retab!<CR>
 nnoremap <leader>xt :set expandtab<CR>:%retab!<CR>
 nnoremap <leader>rt :set noexpandtab<CR>:%retab!<CR>
 
