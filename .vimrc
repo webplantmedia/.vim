@@ -335,7 +335,7 @@ nmap <leader>u :call TransmitFtpSendFile()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ack
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>aa :Ack!<Space>
+nnoremap <Leader>aa :Ack! -i --type=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking
