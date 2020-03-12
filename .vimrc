@@ -362,6 +362,10 @@ map <leader>pp :setlocal paste!<cr>
 " Get VIM to copy to system clipboard?
 set clipboard+=unnamed  " use the clipboards of vim and win
 
+" Run prettier on autosave
+let g:prettier#autoformat = 0
+noremap <Leader>pa :autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
