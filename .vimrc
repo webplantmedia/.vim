@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""d
 " Plug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
@@ -6,21 +6,25 @@ call plug#begin('~/.vim/plugged')
 Plug 'mileszs/ack.vim'
 Plug 'webplantmedia/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'tobyS/pdv'
-Plug 'StanAngeloff/php.vim'
-Plug 'shawncplus/phpcomplete.vim'
-Plug 'godlygeek/tabular'
+" Plug 'StanAngeloff/php.vim'
+" Plug 'shawncplus/phpcomplete.vim'
+" Plug 'godlygeek/tabular'
 Plug 'webplantmedia/transmit-ftp'
 Plug 'SirVer/ultisnips'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-markdown'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
-Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'styled-components/vim-styled-components'
+Plug 'jparise/vim-graphql'
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -47,6 +51,18 @@ let g:mapleader = ","
 
 " Fast saving
 " nmap <leader>w :w!<cr>
+
+
+let g:ale_fixers = {
+ \ 'javascript': ['eslint'],
+ \ 'json': ['eslint'],
+ \ 'scss': ['stylelint'],
+ \ 'php': ['phpcbf'],
+ \ 'css': ['stylelint']
+ \ }
+ 
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -162,6 +178,12 @@ nnoremap <leader>t4 :set tabstop=4 shiftwidth=4 softtabstop=4<CR>:set noexpandta
 nnoremap <leader>xt :set expandtab<CR>:%retab!<CR>
 nnoremap <leader>rt :set noexpandtab<CR>:%retab!<CR>
 
+autocmd FileType javascript :set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType scss :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType css :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType php :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType html :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
+
 " In Brief Mode script will not indent more than one shiftwidth each line.
 " https://github.com/vim-scripts/Simple-Javascript-Indenter
 let g:SimpleJsIndenter_BriefMode = 1
@@ -207,7 +229,6 @@ map <silent> <leader><cr> :noh<cr>
 " map <C-l> <C-W>l
 
 " Close the current buffer
-" map <leader>bd :bd<cr>
 
 " Close the current buffer
 " map <leader>l :ls<cr>
@@ -215,6 +236,7 @@ map <silent> <leader><cr> :noh<cr>
 " Close all the buffers
 map <leader>da :bufdo bd<cr>
 map <leader>dq :bufdo bd!<cr>:q<cr>
+map <leader>dd :bd<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
@@ -275,8 +297,8 @@ set statusline+=\ %P    "percent through file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-set wildignore+=node_modules,vendor,*.map
-
+set wildignore+=*/node_modules/*,*/vendor/*,*.map,*.swp,*.zip
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|vendor/'
 let g:ctrlp_working_path_mode = 'a'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -296,6 +318,7 @@ nnoremap <leader>gt :call GenerateTags()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>ic :set ignorecase!<CR>
 nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <leader>E :Explore<CR>
 nnoremap <leader>ww :set wrap!<CR>:set lbr<CR>
 nnoremap <leader>hs :set hlsearch! hlsearch?<CR>
 nnoremap <leader>hl :set cursorline! cursorline?<CR>
@@ -309,8 +332,17 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeChDirMode=2
 let NERDTreeWinSize=40
 let NERDTreeBookmarksSort=0
+
 "let NERDTreeShowHidden=1
 "let NERDTreeMouseMode = 1
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_keepdir  = 0
+let g:netrw_browse_split = 0
+let g:netrw_dirhistmax = 1
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -335,7 +367,12 @@ nmap <leader>u :call TransmitFtpSendFile()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ack
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Leader>aa :Ack! -i --type=
+nnoremap <Leader>aa :Ack! 
+nnoremap <Leader>ao :Ack! -i --type=
+nnoremap <Leader>aj :Ack! --type=js 
+nnoremap <Leader>ap :Ack! --type=php 
+nnoremap <Leader>as :Ack! --type=sass 
+nnoremap <Leader>ac :Ack! --type=css 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Spell checking

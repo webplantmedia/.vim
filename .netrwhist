@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/node_modules'
+let g:netrw_dirhist_4='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro'
+let g:netrw_dirhist_3='/Users/chrisb'
+let g:netrw_dirhist_2='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/js'
+let g:netrw_dirhist_1='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/config'
+let g:netrw_dirhist_0='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/config/import/content'
+let g:netrw_dirhist_9='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/config/import'
+let g:netrw_dirhist_8='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/config'
+let g:netrw_dirhist_7='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro/lib'
+let g:netrw_dirhist_6='/Users/chrisb/Sites/dev.invitedmba.com/wp-content/themes/creative-pro'
