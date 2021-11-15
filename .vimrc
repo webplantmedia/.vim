@@ -20,11 +20,22 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'styled-components/vim-styled-components'
+" Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tomasiser/vim-code-dark'
+Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'Mofiqul/vscode.nvim'
+Plug 'ciaranm/inkpot'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'savq/melange'
+Plug 'kyoz/purify'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -53,16 +64,16 @@ let g:mapleader = ","
 " nmap <leader>w :w!<cr>
 
 
-let g:ale_fixers = {
- \ 'javascript': ['eslint'],
- \ 'json': ['eslint'],
- \ 'scss': ['stylelint'],
- \ 'php': ['phpcbf'],
- \ 'css': ['stylelint']
- \ }
+" let g:ale_fixers = {
+ " \ 'javascript': ['eslint'],
+ " \ 'json': ['eslint'],
+ " \ 'scss': ['stylelint'],
+ " \ 'php': ['phpcbf'],
+ " \ 'css': ['stylelint']
+ " \ }
  
-let g:ale_fix_on_save = 1
-let g:ale_javascript_prettier_use_local_config = 1
+" let g:ale_fix_on_save = 1
+" let g:ale_javascript_prettier_use_local_config = 1
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
@@ -71,6 +82,41 @@ let g:ale_javascript_prettier_use_local_config = 1
 " get out of horrible vi-compatible mode
 set nocompatible
 
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+let g:coc_global_extensions = [
+      \ 'coc-tsserver',
+      \'coc-python',
+      \'coc-php-cs-fixer',
+      \'coc-json',
+      \'coc-html',
+      \'coc-css',
+      \'coc-xml',
+      \'coc-prettier',
+      \'coc-phpls',
+      \'coc-tslint',
+      \'coc-diagnostic'
+  \ ]
+
+" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  " let g:coc_global_extensions += ['coc-prettier']
+" endif
+
+" if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  " let g:coc_global_extensions += ['coc-eslint']
+" endif
+
+function! SetupCommandAbbrs(from, to)
+  exec 'cnoreabbrev <expr> '.a:from
+        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfunction
+
+" Use C to open coc config
+call SetupCommandAbbrs('C', 'CocConfig')
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM user interface
@@ -129,9 +175,10 @@ set tags=./tags;
 " Enable syntax highlighting
 syntax on
 
-set guifont=Courier\ New:h16
+set guifont=Courier\ New:h17
 set background=dark
-colorscheme desert256v3
+set t_Co=256
+colorscheme codedark
 
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -400,8 +447,8 @@ map <leader>pp :setlocal paste!<cr>
 set clipboard+=unnamed  " use the clipboards of vim and win
 
 " Run prettier on autosave
-let g:prettier#autoformat = 0
-noremap <Leader>pa :autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier<cr>
+" let g:prettier#autoformat = 0
+" noremap <Leader>pa :autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
