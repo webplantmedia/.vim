@@ -86,6 +86,7 @@ let g:coc_global_extensions = [
 	  \'coc-html',
 	  \'coc-css',
 	  \'coc-xml',
+	  \'coc-phpls',
 	  \'coc-prettier',
 	  \'coc-tslint',
 	  \'coc-diagnostic'
