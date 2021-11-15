@@ -20,8 +20,14 @@
     "phpcs": {
       "command": "./vendor/bin/phpcs",
       "debounce": 300,
-      "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
-      "args": ["--report=emacs", "-s", "-"],
+      "rootPatterns": [
+        "composer.json",
+        "composer.lock",
+        "vendor",
+        ".git",
+        "node_modules"
+      ],
+      "args": ["--standard=WordPress,PHPCompatibility,PHPCompatibilityWP"],
       "offsetLine": 0,
       "offsetColumn": 0,
       "sourceName": "phpcs",
@@ -47,8 +53,17 @@
   "diagnostic-languageserver.formatters": {
     "phpcbf": {
       "command": "./vendor/bin/phpcbf",
-      "rootPatterns": ["composer.json", "composer.lock", "vendor", ".git"],
-      "args": ["%file"],
+      "rootPatterns": [
+        "composer.json",
+        "composer.lock",
+        "vendor",
+        ".git",
+        "node_modules"
+      ],
+      "args": [
+        "--standard=WordPress,PHPCompatibility,PHPCompatibilityWP",
+        "%file"
+      ],
       "isStdout": false,
       "doesWriteToFile": true
     }

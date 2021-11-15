@@ -26,6 +26,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
+Plug 'tomasiser/vim-code-dark'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Plug 'dense-analysis/ale'
 
@@ -86,7 +87,6 @@ let g:coc_global_extensions = [
 	  \'coc-css',
 	  \'coc-xml',
 	  \'coc-prettier',
-	  \'coc-phpls',
 	  \'coc-tslint',
 	  \'coc-diagnostic'
   \ ]
