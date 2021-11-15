@@ -25,15 +25,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tomasiser/vim-code-dark'
 Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'Mofiqul/vscode.nvim'
-Plug 'ciaranm/inkpot'
-Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'savq/melange'
-Plug 'kyoz/purify'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Plug 'dense-analysis/ale'
 
@@ -86,31 +78,23 @@ autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 let g:coc_global_extensions = [
-      \ 'coc-tsserver',
-      \'coc-python',
-      \'coc-php-cs-fixer',
-      \'coc-json',
-      \'coc-html',
-      \'coc-css',
-      \'coc-xml',
-      \'coc-prettier',
-      \'coc-phpls',
-      \'coc-tslint',
-      \'coc-diagnostic'
+	  \ 'coc-tsserver',
+	  \'coc-python',
+	  \'coc-php-cs-fixer',
+	  \'coc-json',
+	  \'coc-html',
+	  \'coc-css',
+	  \'coc-xml',
+	  \'coc-prettier',
+	  \'coc-phpls',
+	  \'coc-tslint',
+	  \'coc-diagnostic'
   \ ]
-
-" if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  " let g:coc_global_extensions += ['coc-prettier']
-" endif
-
-" if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  " let g:coc_global_extensions += ['coc-eslint']
-" endif
 
 function! SetupCommandAbbrs(from, to)
   exec 'cnoreabbrev <expr> '.a:from
-        \ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
-        \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+		\ .' ((getcmdtype() ==# ":" && getcmdline() ==# "'.a:from.'")'
+		\ .'? ("'.a:to.'") : ("'.a:from.'"))'
 endfunction
 
 " Use C to open coc config
@@ -178,7 +162,7 @@ syntax on
 set guifont=Courier\ New:h17
 set background=dark
 set t_Co=256
-colorscheme codedark
+colorscheme desert256
 
 
 " Set utf8 as standard encoding and en_US as the standard language
