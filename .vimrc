@@ -9,9 +9,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tobyS/pdv'
-" Plug 'StanAngeloff/php.vim'
-" Plug 'shawncplus/phpcomplete.vim'
-" Plug 'godlygeek/tabular'
 Plug 'webplantmedia/transmit-ftp'
 Plug 'SirVer/ultisnips'
 Plug 'jeetsukumaran/vim-buffergator'
@@ -20,7 +17,6 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
@@ -28,8 +24,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" Plug 'dense-analysis/ale'
 
 " Initialize plugin system
 call plug#end()
