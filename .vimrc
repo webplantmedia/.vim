@@ -27,6 +27,7 @@ Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'tomasiser/vim-code-dark'
+Plug 'editorconfig/editorconfig-vim'
 " Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Plug 'dense-analysis/ale'
 
@@ -162,8 +163,8 @@ syntax on
 
 set guifont=Courier\ New:h17
 set background=dark
-set t_Co=256
-colorscheme desert256
+
+colorscheme codedark
 
 
 " Set utf8 as standard encoding and en_US as the standard language
