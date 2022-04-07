@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'pantharshit00/vim-prisma'
 
 " Initialize plugin system
 call plug#end()
@@ -83,7 +84,8 @@ let g:coc_global_extensions = [
 	  \'coc-xml',
 	  \'coc-phpls',
 	  \'coc-prettier',
-	  \'coc-diagnostic'
+	  \'coc-diagnostic',
+	  \'coc-prisma'
   \ ]
 
 " \'coc-tslint',
