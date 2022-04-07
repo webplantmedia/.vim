@@ -17,7 +17,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -83,9 +83,10 @@ let g:coc_global_extensions = [
 	  \'coc-xml',
 	  \'coc-phpls',
 	  \'coc-prettier',
-	  \'coc-tslint',
 	  \'coc-diagnostic'
   \ ]
+
+" \'coc-tslint',
 
 function! SetupCommandAbbrs(from, to)
   exec 'cnoreabbrev <expr> '.a:from
