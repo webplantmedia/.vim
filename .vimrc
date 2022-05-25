@@ -402,6 +402,7 @@ nnoremap <Leader>ao :Ack! -i --type=
 nnoremap <Leader>aj :Ack! --type=js 
 nnoremap <Leader>ap :Ack! --type=php 
 nnoremap <Leader>as :Ack! --type=sass 
+nnoremap <Leader>at :Ack! --type=ts 
 nnoremap <Leader>ac :Ack! --type=css 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
