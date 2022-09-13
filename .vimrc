@@ -77,7 +77,6 @@ autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 let g:coc_global_extensions = [
 	  \ 'coc-tsserver',
 	  \'coc-python',
-	  \'coc-php-cs-fixer',
 	  \'coc-json',
 	  \'coc-html',
 	  \'coc-css',
@@ -89,6 +88,7 @@ let g:coc_global_extensions = [
   \ ]
 
 " \'coc-tslint',
+" \'coc-php-cs-fixer',
 
 let g:UltiSnipsExpandTrigger="<c-a>"
 
