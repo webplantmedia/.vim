@@ -15,9 +15,11 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'tpope/vim-markdown'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'tobyS/vmustache'
-Plug 'maxmellon/vim-jsx-pretty'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -126,6 +128,33 @@ call SetupCommandAbbrs('C', 'CocConfig')
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+" autocmd CursorHoldI * :call <SID>show_hover_doc()
+" autocmd CursorHold * :call <SID>show_hover_doc()
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+nmap <leader>do <Plug>(coc-codeaction)
+nmap <leader>rn <Plug>(coc-rename)
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -212,9 +241,9 @@ set noswapfile
 set noexpandtab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -234,6 +263,7 @@ nnoremap <leader>xt :set expandtab<CR>:%retab!<CR>
 nnoremap <leader>rt :set noexpandtab<CR>:%retab!<CR>
 
 autocmd FileType javascript :set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType typescript :set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType scss :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType css :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
 autocmd FileType php :set tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab

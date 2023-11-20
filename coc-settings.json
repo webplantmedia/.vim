@@ -15,10 +15,11 @@
     "typescriptreact"
   ],
   "intelephense.diagnostics.undefinedFunctions": false,
-  "intelephense.diagnostics.undefinedFunctions": false,
   "intelephense.diagnostics.undefinedConstants": false,
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedMethods": false,
   "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.undefinedVariables": false
+  "intelephense.diagnostics.undefinedVariables": false,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true
 }
